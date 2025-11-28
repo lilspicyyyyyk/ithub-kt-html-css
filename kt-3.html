@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Карточки Flexbox и Grid</title>
+<style>
+  body {
+    margin: 0;
+    background-color: #f0f4f8; /* основной фон */
+    font-family: 'Arial', sans-serif; /* основной шрифт для текста */
+    padding: 20px;
+  }
+
+  h1 {
+    font-family: 'Georgia', serif; /* шрифт заголовка */
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .container-flex, .container-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+
+  /* Карточки с flexbox */
+  .card-flex {
+    flex: 1 1 160px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Карточки с grid */
+  .card-grid {
+    height: 120px;
+    display: grid;
+    place-items: center; /* центрирование текста */
+    color: white;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Цвета для разных карточек flex */
+  .card-flex:nth-child(1) { background-color: #e63946; }
+  .card-flex:nth-child(2) { background-color: #f1faee; color: #1d3557; }
+  .card-flex:nth-child(3) { background-color: #457b9d; }
+  .card-flex:nth-child(4) { background-color: #2a9d8f; }
+  .card-flex:nth-child(5) { background-color: #f4a261; }
+
+  /* Цвета для разных карточек grid */
+  .card-grid:nth-child(1) { background-color: #264653; }
+  .card-grid:nth-child(2) { background-color: #d62828; }
+  .card-grid:nth-child(3) { background-color: #003049; }
+  .card-grid:nth-child(4) { background-color: #f77f00; }
+  .card-grid:nth-child(5) { background-color: #6a994e; }
+
+  /* Заголовки карточек */
+  .card-flex h3, .card-grid h3 {
+    margin: 0 0 10px;
+    font-family: 'Georgia', serif; /* шрифт заголовков */
+  }
+
+  /* Текст карточек */
+  .card-flex p, .card-grid p {
+    margin: 0;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Карточки с Flexbox и Grid</h1>
+
+<div class="container-flex">
+  <div class="card-flex">
+    <h3>Flexbox 1</h3>
+    <p>Текст карточки 1</p>
+  </div>
+  <div class="card-flex">
+    <h3>Flexbox 2</h3>
+    <p>Текст карточки 2</p>
+  </div>
+  <div class="card-flex">
+    <h3>Flexbox 3</h3>
+    <p>Текст карточки 3</p>
+  </div>
+  <div class="card-flex">
+    <h3>Flexbox 4</h3>
+    <p>Текст карточки 4</p>
+  </div>
+  <div class="card-flex">
+    <h3>Flexbox 5</h3>
+    <p>Текст карточки 5</p>
+  </div>
+</div>
+
+<div class="container-grid">
+  <div class="card-grid">
+    <h3>Grid 1</h3>
+    <p>Текст карточки 1</p>
+  </div>
+  <div class="card-grid">
+    <h3>Grid 2</h3>
+    <p>Текст карточки 2</p>
+  </div>
+  <div class="card-grid">
+    <h3>Grid 3</h3>
+    <p>Текст карточки 3</p>
+  </div>
+  <div class="card-grid">
+    <h3>Grid 4</h3>
+    <p>Текст карточки 4</p>
+  </div>
+  <div class="card-grid">
+    <h3>Grid 5</h3>
+    <p>Текст карточки 5</p>
+  </div>
+</div>
+
+</body>
+</html>
